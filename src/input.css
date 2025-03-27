@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hamburger Menu */
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-gray-900 transition-all duration-300 ease-in-out;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45 translate-y-[7px];
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45 -translate-y-[7px];
+}
+
+/* Navbar */
+.navbar-fixed {
+    @apply fixed top-0 left-0 w-full z-[9999] bg-white bg-opacity-80 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out;
+}
